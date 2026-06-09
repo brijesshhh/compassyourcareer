@@ -12,11 +12,6 @@ export const Route = createFileRoute("/careers/$careerId")({
       ],
     };
   },
-  loader: ({ params }) => {
-    const career = careers.find((c) => c.id === params.careerId);
-    if (!career) throw notFound();
-    return { career };
-  },
   notFoundComponent: () => (
     <div className="mx-auto max-w-2xl px-4 py-32 text-center">
       <h1 className="text-3xl font-bold">Career not found</h1>
@@ -29,7 +24,11 @@ export const Route = createFileRoute("/careers/$careerId")({
 });
 
 function CareerDetailsPage() {
-  const { career } = Route.useLoaderData();
+  const { careerId } = Route.useParams();
+  const career = careers.find((c) => c.id === careerId);
+  if (!career) {
+    throw notFound();
+  }
 
   return (
     <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12">
