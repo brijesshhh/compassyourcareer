@@ -11,6 +11,12 @@ export const Route = createFileRoute("/careers/")({
     meta: [
       { title: "Career Explorer — CareerCompass" },
       { name: "description", content: "Browse curated careers by category. See salary, skills and growth at a glance." },
+      { property: "og:title", content: "Career Explorer — CareerCompass" },
+      { property: "og:description", content: "Browse curated careers by category. See salary, skills and growth at a glance." },
+      { property: "og:url", content: "https://compass-pathfinder-fe.lovable.app/careers" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://compass-pathfinder-fe.lovable.app/careers" },
     ],
   }),
   component: CareersPage,
