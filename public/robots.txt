@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://compass-pathfinder-fe.lovable.app/sitemap.xml

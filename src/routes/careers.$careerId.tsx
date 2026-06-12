@@ -9,6 +9,13 @@ export const Route = createFileRoute("/careers/$careerId")({
       meta: [
         { title: c ? `${c.title} — CareerCompass` : "Career — CareerCompass" },
         { name: "description", content: c?.shortDescription ?? "Career details" },
+        { property: "og:title", content: c ? `${c.title} — CareerCompass` : "Career — CareerCompass" },
+        { property: "og:description", content: c?.shortDescription ?? "Career details" },
+        { property: "og:url", content: `https://compass-pathfinder-fe.lovable.app/careers/${params.careerId}` },
+        { property: "og:type", content: "article" },
+      ],
+      links: [
+        { rel: "canonical", href: `https://compass-pathfinder-fe.lovable.app/careers/${params.careerId}` },
       ],
     };
   },

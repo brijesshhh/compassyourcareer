@@ -8,6 +8,12 @@ export const Route = createFileRoute("/roadmaps")({
     meta: [
       { title: "Technology Roadmaps — CareerCompass" },
       { name: "description", content: "Step-by-step roadmaps for frontend, backend, data science, DevOps and more." },
+      { property: "og:title", content: "Technology Roadmaps — CareerCompass" },
+      { property: "og:description", content: "Step-by-step roadmaps for frontend, backend, data science, DevOps and more." },
+      { property: "og:url", content: "https://compass-pathfinder-fe.lovable.app/roadmaps" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://compass-pathfinder-fe.lovable.app/roadmaps" },
     ],
   }),
   component: RoadmapsPage,

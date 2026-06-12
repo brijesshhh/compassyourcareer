@@ -9,6 +9,12 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "CareerCompass — Find your direction in tech & beyond" },
       { name: "description", content: "Explore careers, technology roadmaps, internship & interview prep — built for students." },
+      { property: "og:title", content: "CareerCompass — Find your direction in tech & beyond" },
+      { property: "og:description", content: "Explore careers, technology roadmaps, internship & interview prep — built for students." },
+      { property: "og:url", content: "https://compass-pathfinder-fe.lovable.app/" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://compass-pathfinder-fe.lovable.app/" },
     ],
   }),
   component: HomePage,

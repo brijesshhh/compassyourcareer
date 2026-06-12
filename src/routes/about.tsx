@@ -7,6 +7,12 @@ export const Route = createFileRoute("/about")({
     meta: [
       { title: "About the Developer — CareerCompass" },
       { name: "description", content: "Meet the developer behind CareerCompass." },
+      { property: "og:title", content: "About the Developer — CareerCompass" },
+      { property: "og:description", content: "Meet the developer behind CareerCompass." },
+      { property: "og:url", content: "https://compass-pathfinder-fe.lovable.app/about" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://compass-pathfinder-fe.lovable.app/about" },
     ],
   }),
   component: AboutPage,

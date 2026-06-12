@@ -12,6 +12,12 @@ export const Route = createFileRoute("/interviews")({
     meta: [
       { title: "Interview Preparation — CareerCompass" },
       { name: "description", content: "Top interview questions across HR, behavioral, technical and system design." },
+      { property: "og:title", content: "Interview Preparation — CareerCompass" },
+      { property: "og:description", content: "Top interview questions across HR, behavioral, technical and system design." },
+      { property: "og:url", content: "https://compass-pathfinder-fe.lovable.app/interviews" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://compass-pathfinder-fe.lovable.app/interviews" },
     ],
   }),
   component: InterviewPage,

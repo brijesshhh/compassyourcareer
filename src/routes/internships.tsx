@@ -8,6 +8,12 @@ export const Route = createFileRoute("/internships")({
     meta: [
       { title: "Internship Preparation — CareerCompass" },
       { name: "description", content: "Resume, portfolio, applications and networking guides for landing your first internship." },
+      { property: "og:title", content: "Internship Preparation — CareerCompass" },
+      { property: "og:description", content: "Resume, portfolio, applications and networking guides for landing your first internship." },
+      { property: "og:url", content: "https://compass-pathfinder-fe.lovable.app/internships" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://compass-pathfinder-fe.lovable.app/internships" },
     ],
   }),
   component: InternshipsPage,
